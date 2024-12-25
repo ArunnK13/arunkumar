@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Certifications - My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .certification {
+            margin: 30px 0;
+        }
+
+        .certification h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        .progress {
+            height: 100%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 20px;
+            transition: width 1s ease;
+        }
+
+        /* Specific colors for different certifications */
+        .azure {
+            background-color: #0078d4;
+        }
+
+        .aws {
+            background-color: #ff9900;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Cloud Certifications</h1>
+
+        <!-- Azure Certifications -->
+        <div class="certification">
+            <h2>Azure Fundamentals</h2>
+            <div class="progress-bar">
+                <div class="progress azure" style="width: 85%;">85%</div>
+            </div>
+            <p>Azure Fundamentals covers cloud concepts and core Azure services.</p>
+        </div>
+
+        <div class="certification">
+            <h2>Azure Architect Expert</h2>
+            <div class="progress-bar">
+                <div class="progress azure" style="width: 75%;">75%</div>
+            </div>
+            <p>This certification covers architecting solutions using Azure services.</p>
+        </div>
+
+        <!-- AWS Certifications -->
+        <div class="certification">
+            <h2>AWS Certified Solutions Architect - Associate</h2>
+            <div class="progress-bar">
+                <div class="progress aws" style="width: 80%;">80%</div>
+            </div>
+            <p>Architecting on AWS, learning key concepts, and deploying applications.</p>
+        </div>
+
+        <div class="certification">
+            <h2>AWS Certified Developer - Associate</h2>
+            <div class="progress-bar">
+                <div class="progress aws" style="width: 70%;">70%</div>
+            </div>
+            <p>Proficiency in developing and maintaining applications on AWS.</p>
+        </div>
+
+        <div class="button">
+            <a href="https://www.microsoft.com/en-us/learning/azure-certification.aspx" target="_blank">Learn More about Azure Certifications</a>
+            <br>
+            <a href="https://aws.amazon.com/certification/" target="_blank">Learn More about AWS Certifications</a>
+        </div>
+    </div>
+
+    <script>
+        // Example of animating the progress bars
+        window.onload = () => {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        };
+    </script>
+
+</body>
+</html>
