@@ -3,68 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Certifications - My Profile</title>
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For Icons -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
+            background-color: #f8f9fa;
         }
-
         .container {
-            width: 80%;
-            max-width: 1000px;
-            background-color: #fff;
-            padding: 20px;
+            width: 85%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            text-align: center;
-            color: #333;
+        .heading {
+            font-size: 1.5em;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            margin-bottom: 15px;
         }
 
-        .certification {
-            margin: 30px 0;
+        .work-experience ul, .education ul, .certifications ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .certification h2 {
-            color: #333;
-            font-size: 24px;
+        .work-experience li, .education li, .certifications li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
         }
 
-        .progress-bar {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 30px;
-            margin: 10px 0;
+        .tech-skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
         }
 
-        .progress {
-            height: 100%;
-            text-align: center;
-            line-height: 30px;
+        .tech-skills li {
+            background-color: #007bff;
             color: white;
+            padding: 8px 20px;
             border-radius: 20px;
-            transition: width 1s ease;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        /* Specific colors for different certifications */
-        .azure {
-            background-color: #0078d4;
+        .tech-skills li:hover {
+            transform: scale(1.1);
         }
 
-        .aws {
-            background-color: #ff9900;
+        .icons {
+            margin-right: 10px;
+        }
+
+        .icons i {
+            color: #007bff;
+        }
+
+        .summary p {
+            text-align: justify;
         }
 
         .button {
@@ -73,77 +87,105 @@
         }
 
         .button a {
-            text-decoration: none;
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #007bff;
             color: white;
+            text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
 
         .button a:hover {
-            background-color: #555;
+            background-color: #0056b3;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .tech-skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>My Cloud Certifications</h1>
+        <!-- Header Section -->
+        <header>
+            <h1>John Doe</h1>
+            <p style="text-align: center; font-size: 1.2em;">Cloud Architect | Software Developer | Tech Enthusiast</p>
+        </header>
 
-        <!-- Azure Certifications -->
-        <div class="certification">
-            <h2>Azure Fundamentals</h2>
-            <div class="progress-bar">
-                <div class="progress azure" style="width: 85%;">85%</div>
-            </div>
-            <p>Azure Fundamentals covers cloud concepts and core Azure services.</p>
-        </div>
+        <!-- Summary Section -->
+        <section class="summary">
+            <div class="heading">Summary</div>
+            <p>
+                A passionate and results-oriented Cloud Architect with over 5 years of experience in designing, implementing, and managing cloud solutions using AWS and Azure. Strong knowledge of DevOps practices and the ability to create scalable, high-performance cloud architectures. Always eager to learn new technologies and enhance skills.
+            </p>
+        </section>
 
-        <div class="certification">
-            <h2>Azure Architect Expert</h2>
-            <div class="progress-bar">
-                <div class="progress azure" style="width: 75%;">75%</div>
-            </div>
-            <p>This certification covers architecting solutions using Azure services.</p>
-        </div>
+        <!-- Education Section -->
+        <section class="education">
+            <div class="heading">Education Qualification</div>
+            <ul>
+                <li><strong>Bachelor's in Computer Science</strong> - XYZ University (2014 - 2018)</li>
+                <li><strong>Master's in Cloud Computing</strong> - ABC University (2019 - 2021)</li>
+            </ul>
+        </section>
 
-        <!-- AWS Certifications -->
-        <div class="certification">
-            <h2>AWS Certified Solutions Architect - Associate</h2>
-            <div class="progress-bar">
-                <div class="progress aws" style="width: 80%;">80%</div>
-            </div>
-            <p>Architecting on AWS, learning key concepts, and deploying applications.</p>
-        </div>
+        <!-- Certifications Section -->
+        <section class="certifications">
+            <div class="heading">Certifications</div>
+            <ul>
+                <li><i class="fas fa-certificate icons"></i> Microsoft Certified: Azure Solutions Architect Expert</li>
+                <li><i class="fas fa-certificate icons"></i> AWS Certified Solutions Architect – Associate</li>
+                <li><i class="fas fa-certificate icons"></i> Certified Kubernetes Administrator (CKA)</li>
+            </ul>
+        </section>
 
-        <div class="certification">
-            <h2>AWS Certified Developer - Associate</h2>
-            <div class="progress-bar">
-                <div class="progress aws" style="width: 70%;">70%</div>
-            </div>
-            <p>Proficiency in developing and maintaining applications on AWS.</p>
-        </div>
+        <!-- Work Experience Section -->
+        <section class="work-experience">
+            <div class="heading">Work Experience</div>
+            <ul>
+                <li><strong>Senior Cloud Engineer</strong> - Tech Solutions Inc. (2021 - Present)</li>
+                <li><strong>Cloud Architect</strong> - Cloud Innovators (2019 - 2021)</li>
+                <li><strong>Software Developer</strong> - CodeWorks Ltd. (2018 - 2019)</li>
+            </ul>
+        </section>
 
-        <div class="button">
-            <a href="https://www.microsoft.com/en-us/learning/azure-certification.aspx" target="_blank">Learn More about Azure Certifications</a>
-            <br>
-            <a href="https://aws.amazon.com/certification/" target="_blank">Learn More about AWS Certifications</a>
-        </div>
+        <!-- Technical Skills Section -->
+        <section class="tech-skills">
+            <div class="heading">Technical Skills</div>
+            <ul>
+                <li>Azure</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>CI/CD</li>
+                <li>Terraform</li>
+                <li>Python</li>
+                <li>DevOps</li>
+            </ul>
+        </section>
+
+        <!-- Contact Button -->
+        <section class="button">
+            <a href="mailto:john.doe@example.com">Contact Me</a>
+        </section>
     </div>
 
     <script>
-        // Example of animating the progress bars
-        window.onload = () => {
-            const progressBars = document.querySelectorAll('.progress');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
+        // Add interactive hover effect on tech skill items
+        const techItems = document.querySelectorAll('.tech-skills li');
+        techItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = '#0056b3';
             });
-        };
+            item.addEventListener('mouseout', () => {
+                item.style.backgroundColor = '#007bff';
+            });
+        });
     </script>
 
 </body>
